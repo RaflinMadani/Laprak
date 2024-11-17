@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    system("cls");
+    int jml_p, wb, x;
+    double upj, bp, tb = 0;
+    cout << "Masukkan Jumlah Proyek yang akan dikerjakan (masukkan angka lebih dari 0): ";
+    cin >> jml_p; cout << endl;
+    for (x = 1; x <= jml_p; x++) {
+        cout << "Proyek ke-" << x << ": " << endl;
+        cout << "Masukkan jumlah jam kerja untuk proyek ini: ";
+        cin >> wb;
+        cout << "Masukkan upah per jam untuk proyek ini: ";
+        cin >> upj;
+        bp = wb * upj;
+        cout << "Bayaran untuk proyek ke-" << x << ": " << bp << endl << endl;
+        tb += bp;
+    }
+    cout << "Total bayaran seluruh proyek adalah: " << tb << endl;
+}

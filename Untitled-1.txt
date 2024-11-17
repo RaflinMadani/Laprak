@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool kabisat(int Thn) 
+{   if ((Thn % 4 == 0 && Thn % 100 != 0) || (Thn % 400 == 0)) 
+    {return true;}
+    return false;
+}
+
+int main() 
+{
+    system("cls");
+    int thn;
+    string reg_id;
+    string reg_pw;
+    string i_id;
+    string i_pw;
+    
+    cout << "+++++ REGISTRASI +++++" << endl << endl; 
+    cout << "Username : ";
+    cin >> reg_id;
+    cout << "Password : ";
+    cin >> reg_pw;
+    cout << "Tahun Lahir: ";
+    cin >> thn; cout << endl;
+
+    cout << "+++++ LOGIN +++++" << endl << endl;
+    cout << "Username : ";
+    cin >> i_id;
+    cout << "Password : ";
+    cin >> i_pw; cout << endl;
+    
+    if (i_id == reg_id && i_pw == reg_pw) 
+{      cout << "Login Berhasil Cuy" << endl << endl;
+       cout << "Username: " << reg_id << endl;
+
+        if (kabisat(thn)) 
+        {cout << "Tahun " << thn << " merupakan Tahun Kabisat" << endl;} 
+
+            else {cout << "Tahun " << thn << " bukan merupakan Tahun Kabisat" << endl;}
+} 
+                else if (i_id == reg_id) 
+                {cout << "Password salah" << endl;} 
+
+                    else if (i_pw == reg_pw) 
+                    {cout << "Username salah" << endl;} 
+
+                        else {cout << "Salah semua woi" << endl;}
+return 0;
+}
